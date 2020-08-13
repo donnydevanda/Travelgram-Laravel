@@ -281,9 +281,95 @@ header .btn-get-started:hover {
   font-size: 20px;
 }
 
+.card-details h3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #071C4D;
+}
+
 .card-details p {
   font-size: 18px;
   color: #B1B1B1;
+}
+
+.card-details .trip-information th {
+  font-weight: 300;
+  font-size: 18px;
+  color: #071C4D;
+}
+
+.card-details .trip-information td {
+  font-weight: 300;
+  font-size: 18px;
+  color: #B1B1B1;
+}
+
+.card-details .trip-information .text-blue {
+  color: #071C4D;
+  font-weight: bold;
+}
+
+.card-details .trip-information .text-orange {
+  color: #F87C1D;
+  font-weight: bold;
+}
+
+.card-details .payment-instruction {
+  font-weight: 300;
+  size: 14px;
+  color: #B1B1B1;
+}
+
+.card-details .bank .bank-item h3 {
+  size: 18px;
+  color: #071C4D;
+  margin-bottom: 0;
+}
+
+.card-details .bank .bank-item p {
+  margin-bottom: 0;
+}
+
+.card-details .bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.card-details .bank .bank-item .description p {
+  font-weight: normal;
+  font-size: 16px;
+  color: #071C4D;
+}
+
+.card-details .bank .bank-image {
+  width: 45px;
+  height: 45px;
+  float: left;
+}
+
+.card-details .disclaimer {
+  font-weight: 300;
+  font-size: 14px;
+  color: #B1B1B1;
+}
+
+.card-details .gj-datepicker .datepicker {
+  border-right: 0;
+}
+
+.card-details .gj-datepicker .input-group-append {
+  padding-right: 30px;
+}
+
+.card-details .btn-add-now {
+  background-color: #071C4D;
+  color: #FFFFFF;
+}
+
+.card-details .btn-add-now:hover {
+  background-color: #2c4d9b;
+  color: #FFFFFF;
 }
 
 .card-right {
@@ -351,6 +437,33 @@ header .btn-get-started:hover {
 
 .btn-join-now.hover {
   background-color: #FF9E53;
+  color: #FFFFFF;
+}
+
+.section-success {
+  height: 90vh;
+}
+
+.section-success h1 {
+  font-weight: 600;
+  size: 26px;
+  color: #071C4D;
+}
+
+.section-success p {
+  font-weight: 300;
+  font-size: 18px;
+  color: #B1B1B1;
+}
+
+.section-success .btn-home-page {
+  border-radius: 4px;
+  background-color: #071C4D;
+  color: #FFFFFF;
+}
+
+.section-success .btn-home-page:hover {
+  background-color: #2c4d9b;
   color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
