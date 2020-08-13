@@ -261,3 +261,115 @@ header{
         font-weight: bold;
     }
 }
+
+.section-details-header{
+    min-height: 310px;
+    background: #E4E6EB;
+    margin-top: -75px;
+}
+
+.section-details-content{
+    margin-top: -210px;
+    min-height: 100vh;
+
+    .breadcrumb{
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .breadcrumb-item{
+        &.active{
+            font-weight: bold;
+            color: #071C4D;
+        }
+    }
+}
+
+.card-details{
+    padding: 30px;
+    border-radius: 11px;
+
+    h1{
+        font-size: 26px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 18px;
+        color: #B1B1B1;
+    }
+}
+
+.card-right{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.features{
+    margin-top: 20px;
+
+    h3{
+        font-size: 18px;
+        color: #071C4D;
+        margin-bottom: 0;
+    }
+
+    p{
+        margin-bottom: 0;
+    }
+
+    .description{
+        margin-left: 10px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .features-image{
+        width: 45px;
+        height: 45px;
+        float: left;
+    }
+}
+
+.gallery{
+    .xzoom-container{
+        display: block;
+
+        .xzoom{
+            width: 100%;
+            box-shadow: none;
+            margin-bottom: 10px;
+        }
+
+        .xactive{
+            border: 4px solid #1A4C9C;
+            box-shadow: none;
+        }
+    }
+}
+
+.member{
+    .member-image{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.join-container{
+    margin-top: -16px;
+}
+
+.btn-join-now{
+    background-color: #F87C1D;
+    color: #FFFFFF;
+    border-radius: 0;
+
+    &.hover{
+        background-color: #FF9E53;
+        color: #FFFFFF;
+    }
+}
