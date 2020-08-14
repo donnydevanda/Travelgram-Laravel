@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.detail')
 @section('title', 'Package Detail')
 
 @section('content')
@@ -144,7 +144,7 @@
                      </div>
 
                      <div class="join-container">
-                         <a href="checkout.html" class="btn btn-block btn-join-now mt-3 py-2">
+                         <a href="{{url('/checkout')}}" class="btn btn-block btn-join-now mt-3 py-2">
                              Join Now
                          </a>
                      </div>
@@ -159,7 +159,7 @@
 <link rel="stylesheet" href="{{url('frontend/libraries/xzoom/xzoom.css')}}"/>
 @endpush
 
-@push('addon-scrip')
+@push('addon-script')
 <script src="{{url('frontend/libraries/xzoom/xzoom.min.js')}}"></script>
 <script>
     $(document).ready(function(){

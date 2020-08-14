@@ -1,8 +1,5 @@
 @extends('layouts.app')
-
-@section('title')
-    Travelgram
-@endsection
+@section('title', 'Travelgram')
 
 @section('content')
 <!-- Header -->
@@ -57,7 +54,7 @@
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">Deratan, Bali</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{url('/detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +65,7 @@
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">Bromo, Malang</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{url('/detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +76,7 @@
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">Nusa Penida</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{url('/detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +87,7 @@
                         <div class="travel-country">UAE</div>
                         <div class="travel-location">Dubai</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{url('/detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
