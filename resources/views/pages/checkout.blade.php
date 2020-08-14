@@ -44,20 +44,20 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="frontend/images/going-1.png" alt="" height="60px"></td>
+                                        <td><img src="{{url('frontend/images/going-1.png')}}" alt="" height="60px"></td>
                                         <td class="align-middle">Angga Risky</td>
                                         <td class="align-middle">CN</td>
                                         <td class="align-middle">N/A</td>
                                         <td class="align-middle">Active</td>
-                                        <td class="align-middle"><a href=""><img src="frontend/images/ic_remove.png" alt=""></a></td>
+                                        <td class="align-middle"><a href=""><img src="{{url('frontend/images/ic_remove.png')}}" alt=""></a></td>
                                     </tr>
                                     <tr>
-                                        <td><img src="frontend/images/going-2.png" alt="" height="60px"></td>
+                                        <td><img src="{{url('frontend/images/going-2.png')}}" alt="" height="60px"></td>
                                         <td class="align-middle">Galih Pratama</td>
                                         <td class="align-middle">SG</td>
                                         <td class="align-middle">30 Days</td>
                                         <td class="align-middle">Active</td>
-                                        <td class="align-middle"><a href=""><img src="frontend/images/ic_remove.png" alt=""></a></td>
+                                        <td class="align-middle"><a href=""><img src="{{url('frontend/images/ic_remove.png')}}" alt=""></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -137,7 +137,7 @@
                         <p class="payment-instruction">Please complete your payment before continue to travel</p>
                         <div class="bank">
                             <div class="bank-item pb-3">
-                                <img src="frontend/images/ic_bank.png" alt="" class="bank-image">
+                                <img src="{{url('frontend/images/ic_bank.png')}}" alt="" class="bank-image">
                                 <div class="description">
                                     <h3>PT. Travelgram ID</h3>
                                     <p>5271 6789 8877 <br> Bank Central Asia</p>
@@ -146,7 +146,7 @@
                             </div>
 
                             <div class="bank-item pb-3">
-                                <img src="frontend/images/ic_bank.png" alt="" class="bank-image">
+                                <img src="{{url('frontend/images/ic_bank.png')}}" alt="" class="bank-image">
                                 <div class="description">
                                     <h3>PT. Travelgram ID</h3>
                                     <p>6435 5555 6661 <br> Bank Mandiri</p>
@@ -179,7 +179,7 @@
     $('.datepicker').datepicker({
         uiLibrary: 'bootstrap4',
         icons: {
-            rightIcon: '<img src="frontend/images/ic_doe.png">'
+            rightIcon: '<img src="{{url('frontend/images/ic_doe.png')}}">'
         }
     });
 </script> 

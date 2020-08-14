@@ -103,7 +103,7 @@
                     <p>Companies are trusted us <br>more than just a trip.</p>
                 </div>
                 <div class="col-md-8 text-center">
-                    <img src="frontend/images/logos_partner.png" alt="partner-logo" class="img-partner">
+                    <img src="{{url('frontend/images/logos_partner.png')}}" alt="partner-logo" class="img-partner">
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testi-1.png" alt="testi-1" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testi-1.png')}}" alt="testi-1" class="mb-4 rounded-circle">
                             <h3 class="mb-4">Angga Risky</h3>
                             <p class="testimonial">“ It was glorious and I could <br>
                                 not stop to say wohooo for <br>
@@ -141,7 +141,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testi-2.png" alt="testi-2" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testi-2.png')}}" alt="testi-2" class="mb-4 rounded-circle">
                             <h3 class="mb-4">Shayna</h3>
                             <p class="testimonial">“ The trip was amazing and <br>
                                 I saw something beautiful in <br>
@@ -156,7 +156,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testi-3.png" alt="testi-3" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testi-3.png')}}" alt="testi-3" class="mb-4 rounded-circle">
                             <h3 class="mb-4">Shabrina</h3>
                             <p class="testimonial">“ I loved it when the waves <br>
                                 was shaking harder — I was <br>
