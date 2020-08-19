@@ -33,7 +33,7 @@ class GalleryController extends Controller
     {
         $travel_packages = TravelPackage::all();
         return view('pages.admin.gallery.create',[
-            'travel_package' => $travel_packages
+            'travel_packages' => $travel_packages
         ]);
     }
 

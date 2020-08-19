@@ -5,9 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Travel Package</h1>
-    <a href="{{route('travel-package.create')}}" class="btn btn-sm btn-primary shadow-sm">
-        <i class="fas fa-plus fa-sm text-white-50">Edit Travel Package {{item -> title}}</i>
+    <h1 class="h3 mb-0 text-gray-800">Edit Travel Package  {{$item -> title}}</h1>
     </a>
     </div>
 
@@ -23,7 +21,7 @@
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="{{route('travel-package.update, $item->id)}}" method="post">
+            <form action="{{route('travel-package.update', $item->id)}}" method="post">
                 @method('put')
                 @csrf
                 <div class="form-group">
@@ -56,11 +54,11 @@
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration</label>
-                    <input type="text" class="form-control" name="duration" placeholder="duration" value="{{$item->duration}}">
+                    <input type="text" class="form-control" name="duration" placeholder="Duration" value="{{$item->duration}}">
                 </div>
                 <div class="form-group">
                     <label for="type">Type</label>
-                    <input type="number" class="form-control" name="Type" placeholder="type" value="{{$item->type}}">
+                    <input type="text" class="form-control" name="type" placeholder="Type" value="{{$item->type}}">
                 </div>
                 <div class="form-group">
                     <label for="price">Price</label>

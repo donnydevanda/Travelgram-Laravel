@@ -16,7 +16,7 @@ class CreateTravelPackagesTable extends Migration
         Schema::create('travel_packages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->string('slog');
+            $table->string('slug');
             $table->string('location');
             $table->longText('about');
             $table->string('featured_event');

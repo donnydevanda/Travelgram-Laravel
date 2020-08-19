@@ -5,9 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Travel Package</h1>
-    <a href="{{route('travel-package.create')}}" class="btn btn-sm btn-primary shadow-sm">
-        <i class="fas fa-plus fa-sm text-white-50">Add Travel Package</i>
+    <h1 class="h3 mb-0 text-gray-800">Add Travel Package</h1>
     </a>
     </div>
 
@@ -21,9 +19,9 @@
     </div>
     @endif
 
-    <div class="card">
+    <div class="card shadow">
         <div class="card-body">
-            <form action="{{route('travel-package.store)}}" method="post">
+            <form action="{{route('travel-package.store')}}" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="title">Title</label>
