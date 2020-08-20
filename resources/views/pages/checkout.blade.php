@@ -28,8 +28,19 @@
             <div class="row">
                 <div class="col-lg-8 pl-lg-0">
                     <div class="card card-details">
-                        <h1>Who's Going?</h1>
-                        <p>Trip to Bali, Indonesia</p>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                      <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <h1>Who is Going?</h1>
+                        <p>
+                            Trip to {{ $item -> travel_package -> title }}, {{ $item -> travel_package -> location }}
+                        </p>
                         <div class="attendee">
                             <table class="table table-responsive-sm text-center">
                                 <thead>
@@ -43,47 +54,51 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($item -> details as $detail)
                                     <tr>
-                                        <td><img src="{{url('frontend/images/going-1.png')}}" alt="" height="60px"></td>
-                                        <td class="align-middle">Angga Risky</td>
-                                        <td class="align-middle">CN</td>
-                                        <td class="align-middle">N/A</td>
-                                        <td class="align-middle">Active</td>
-                                        <td class="align-middle"><a href=""><img src="{{url('frontend/images/ic_remove.png')}}" alt=""></a></td>
+                                        <td><img src="https://ui-avatars.com/api/?name={{ $detail->username }}" alt="" height="60px" class="rounded-circle"></td>
+                                        <td class="align-middle">{{ $detail->username }}</td>
+                                        <td class="align-middle">{{ $detail->nationality }}</td>
+                                        <td class="align-middle">{{ $detail->is_visa ? '30 Days' : 'N/A' }}</td>
+                                        <td class="align-middle">{{ \Carbon\Carbon::createFromDate($detail->doe_passport) > \Carbon\Carbon::now() ? 'Active' : 'Inactive'}}</td>
+                                        <td class="align-middle"><a href="{{ route('checkout-remove', $detail->id) }}"><img src="{{url('frontend/images/ic_remove.png')}}" alt=""></a></td>
                                     </tr>
-                                    <tr>
-                                        <td><img src="{{url('frontend/images/going-2.png')}}" alt="" height="60px"></td>
-                                        <td class="align-middle">Galih Pratama</td>
-                                        <td class="align-middle">SG</td>
-                                        <td class="align-middle">30 Days</td>
-                                        <td class="align-middle">Active</td>
-                                        <td class="align-middle"><a href=""><img src="{{url('frontend/images/ic_remove.png')}}" alt=""></a></td>
-                                    </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">
+                                                No Visitor
+                                            </td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="member mt-3">
                             <h2>Add Member</h2>
-                            <from class="form-inline">
-                                <label for="inputUsername" class="sr-only">Name</label>
-                                <input type="text" name="inputUsername" class="form-control mb-2 mr-sm-2" id="inputUsername" placeholder="Username">
+                            <form class="form-inline" method="post" action="{{ route('checkout-create', $item->id) }}">
+                                @csrf
+                                <label for="username" class="sr-only">Name</label>
+                                <input type="text" name="username" required class="form-control mb-2 mr-sm-2" id="username" placeholder="Username">
+
+                                <label for="nationality" class="sr-only">Nationality</label>
+                                <input type="text" name="nationality" required class="form-control mb-2 mr-sm-2" style="width: 50px" id="nationality" placeholder="Nationality">
                                 
-                                <label for="inputVisa" class="sr-only">Visa</label>
-                                <select name="inputVIsa" id="inputVisa" class="custom-select mb-2 mr-sm-2">
-                                    <option value="VISA" selected>VISA</option>
-                                    <option value="30 Days">30 Days</option>
-                                    <option value="N/A">N/A</option>
+                                <label for="is_visa" required class="sr-only">Visa</label>
+                                <select name="is_visa" id="is_visa" class="custom-select mb-2 mr-sm-2">
+                                    <option value="" selected>VISA</option>
+                                    <option value="1">30 Days</option>
+                                    <option value="0">N/A</option>
                                 </select>
 
-                            <label for="doePassport" class="sr-only">DOE Passport</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <input type="text" class="form-control datepicker" 
-                                id="doePassport" placeholder="DOE Passport">
-                            </div>
+                                <label for="doe_passport" class="sr-only">DOE Passport</label>
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <input type="text" required class="form-control datepicker" name="doe_passport"
+                                    id="doe_passport" placeholder="DOE Passport">
+                                </div>
 
-                            <button type="submit" class="btn btn-add-now mb-2 px-4">Add Now</button>
-                            </from>
+                                <button type="submit" class="btn btn-add-now mb-2 px-4">Add Now</button>
+                            </form>
                             <h3 class="mt-3 mb-0">Note</h3>
                             <p class="disclaimer mb-0">You are only able to invite member that has registered in Travelgram.</p>
                         </div>
@@ -97,36 +112,36 @@
                             <tr>
                                 <th width="50%">Members</th>
                                 <td width="50%" class="text-right">
-                                    2 Person
+                                    {{ $item -> details -> count() }} Person
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Additional Visa</th>
                                 <td width="50%" class="text-right">
-                                    IDR 2.000.000
+                                    IDR {{ $item -> additional_visa }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Trip Price</th>
                                 <td width="50%" class="text-right">
-                                    IDR 8.500.000
+                                    USD {{ $item -> travel_package -> price }} / Person
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Subtotal</th>
                                 <td width="50%" class="text-right">
-                                    IDR 19.000.000
+                                    USD {{ $item -> transaction_total }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Total(+Unique)</th>
                                 <td width="50%" class="text-right text-total">
-                                    <span class="text-blue">IDR 19.000.</span>
-                                    <span class="text-orange">333</span>
+                                    <span class="text-blue">USD {{ $item -> transaction_total}}.</span>
+                                    <span class="text-orange">{{mt_rand(0,99)}}</span>
                                 </td>
                             </tr>
                         </table>
@@ -157,10 +172,10 @@
                     </div>
 
                     <div class="join-container">
-                        <a href="{{url('/checkout/success')}}" class="btn btn-block btn-join-now mt-3 py-2">Confirm Payment</a>
+                        <a href="{{ route('checkout-success', $item -> id) }}" class="btn btn-block btn-join-now mt-3 py-2">Confirm Payment</a>
                     </div>
                     <div class="text-center mt-3">
-                        <a href="{{url('/detail')}}" class="text-muted">Cancel Booking</a>
+                        <a href="{{ route('detail', $item -> travel_package -> slug) }}" class="text-muted">Cancel Booking</a>
                     </div>
                 </div>
             </div>
@@ -177,6 +192,7 @@
 <script src="{{url('frontend/libraries/gijgo/js/gijgo.min.js')}}"></script>
 <script>
     $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd',
         uiLibrary: 'bootstrap4',
         icons: {
             rightIcon: '<img src="{{url('frontend/images/ic_doe.png')}}">'
