@@ -4,8 +4,8 @@
 @section('content')
 <!-- Header -->
 <header class="text-center">
-    <h1>Explore The Beautiful World <br> As One Click</h1>
-    <p class="mt-3">You will see beautiful <br> moment you never see</p>
+    <h1>Explore The Beauty <br>of Indonesia</h1>
+    <p class="mt-3">You wish you never know another country</p>
     <a href="#popular" class="btn btn-get-started px-4 mt-4">
         Get Started
     </a>
@@ -97,7 +97,7 @@
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
                             <img src="{{url('frontend/images/testi-1.png')}}" alt="testi-1" class="mb-4 rounded-circle">
-                            <h3 class="mb-4">Angga Risky</h3>
+                            <h3 class="mb-4">Riski</h3>
                             <p class="testimonial">“ It was glorious and I could <br>
                                 not stop to say wohooo for <br>
                                 every single moment <br>
