@@ -12,9 +12,9 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Service</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">LINK</a>
-                        <a href="#" class="dropdown-item">LINK</a>
-                        <a href="#" class="dropdown-item">LINK</a>
+                        <a href="#" class="dropdown-item">Flight</a>
+                        <a href="#" class="dropdown-item">Hotel</a>
+                        <a href="#" class="dropdown-item">Tour</a>
                     </div>
                 </li>
                 <li class="nav-item mx-md-2"><a href="#" class="nav-link">Testimonial</a></li>
@@ -28,7 +28,7 @@
                     Login
                 </button>
             </form>
-            
+
             <!--Desktop Button-->
             <form action="" class="form-inline my-2 my-lg-0 d-none d-md-block">
                 <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button"
@@ -47,7 +47,7 @@
                     Logout
                 </button>
             </form>
-            
+
             <!--Desktop Button-->
             <form class="form-inline my-2 my-lg-0 d-none d-md-block" action="{{url('logout')}}"
             method="POST">
@@ -58,7 +58,7 @@
             </form>
             @endauth
 
-           
+
         </div>
     </nav>
 </div>

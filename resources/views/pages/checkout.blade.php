@@ -83,7 +83,7 @@
 
                                 <label for="nationality" class="sr-only">Nationality</label>
                                 <input type="text" name="nationality" required class="form-control mb-2 mr-sm-2" style="width: 50px" id="nationality" placeholder="Nationality">
-                                
+
                                 <label for="is_visa" required class="sr-only">Visa</label>
                                 <select name="is_visa" id="is_visa" class="custom-select mb-2 mr-sm-2">
                                     <option value="" selected>VISA</option>
@@ -126,21 +126,21 @@
                             <tr>
                                 <th width="50%">Trip Price</th>
                                 <td width="50%" class="text-right">
-                                    USD {{ $item -> travel_package -> price }} / Person
+                                    IDR {{ $item -> travel_package -> price }} / Person
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Subtotal</th>
                                 <td width="50%" class="text-right">
-                                    USD {{ $item -> transaction_total }}
+                                   IDR {{ $item -> transaction_total }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Total(+Unique)</th>
                                 <td width="50%" class="text-right text-total">
-                                    <span class="text-blue">USD {{ $item -> transaction_total}}.</span>
+                                    <span class="text-blue">IDR {{ $item -> transaction_total}}.</span>
                                     <span class="text-orange">{{mt_rand(0,99)}}</span>
                                 </td>
                             </tr>
@@ -198,5 +198,5 @@
             rightIcon: '<img src="{{url('frontend/images/ic_doe.png')}}">'
         }
     });
-</script> 
+</script>
 @endpush
