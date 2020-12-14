@@ -4,7 +4,7 @@
 @section('content')
 <!-- Header -->
 <header class="text-center">
-    <h1>Explore The Beauty <br>of Indonesia</h1>
+    <h1>Explore The Beauty<br>of Indonesia</h1>
     <p class="mt-3">You wish you never know another country</p>
     <a href="#popular" class="btn btn-get-started px-4 mt-4">
         Get Started
@@ -13,7 +13,7 @@
 
 <!-- Main -->
 <main>
-    <div class="container">
+    <div class="container d-none d-sm-block">
         <section class="section-stats row justify-content-center" id="stats">
             <div class="col-3 col-md-2 stats-detail">
                 <h2>20K</h2>
@@ -50,7 +50,7 @@
             <div class="section-popular-travel row justify-content-center">
                 @foreach ($items as $item)
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card-travel text-center d-flex flex-column" 
+                    <div class="card-travel text-center d-flex flex-column"
                         style="background-image: url('{{ $item->galleries->count() ? Storage::url
                         ($item -> galleries -> first() -> image) : '' }}');">
                         <div class="travel-country">{{ $item->location }}</div>

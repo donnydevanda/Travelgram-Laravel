@@ -20,7 +20,7 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Location</th>
-                        <th>Type</th>
+                        <th>Image</th>
                         <th>Departure Date</th>
                         <th>Type</th>
                         <th>Action</th>
@@ -32,7 +32,7 @@
                         <td>{{$item -> id}}</td>
                         <td>{{$item -> title}}</td>
                         <td>{{$item -> location}}</td>
-                        <td>{{$item -> type}}</td>
+                        <td><img src="{{ Storage::url($item->galleries->first()->image) }}" style="width: 200px"></td>
                         <td>{{$item -> departure_date}}</td>
                         <td>{{$item -> type}}</td>
                         <td>

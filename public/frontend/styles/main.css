@@ -95,7 +95,8 @@ header .btn-get-started:hover {
 }
 
 .section-popular .section-popular-heading {
-  margin: 150px;
+  margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .section-popular h2, .section-popular p {

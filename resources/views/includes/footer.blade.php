@@ -48,7 +48,7 @@
 
     <div class="container-fluid">
         <div class="row border-top justify-content-center allign-items-center pt-4">
-            <div class="col-auto text-gray-500 font-weight-light">
+            <div class="col-auto text-gray-500 font-weight-light text-center">
                 2020 Copyright Travelgram • All rights reserved • Made in South Jakarta
             </div>
         </div>
