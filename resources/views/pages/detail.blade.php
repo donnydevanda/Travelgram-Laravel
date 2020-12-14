@@ -119,7 +119,7 @@
                              <tr>
                                  <th width="50%">Price</th>
                                  <td width="50%" class="text-right">
-                                     IDR {{ $item->price }}
+                                     IDR {{ number_format($item->price) }}
                                  </td>
                              </tr>
                          </table>

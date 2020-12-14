@@ -126,21 +126,21 @@
                             <tr>
                                 <th width="50%">Trip Price</th>
                                 <td width="50%" class="text-right">
-                                    IDR {{ $item -> travel_package -> price }} / Person
+                                    IDR {{ number_format($item -> travel_package -> price) }} / Person
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Subtotal</th>
                                 <td width="50%" class="text-right">
-                                   IDR {{ $item -> transaction_total }}
+                                   IDR {{ number_format($item->transaction_total) }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <th width="50%">Total(+Unique)</th>
                                 <td width="50%" class="text-right text-total">
-                                    <span class="text-blue">IDR {{ $item -> transaction_total}}.</span>
+                                    <span class="text-blue">IDR {{ number_format($item->transaction_total) }}.</span>
                                     <span class="text-orange">{{mt_rand(0,99)}}</span>
                                 </td>
                             </tr>

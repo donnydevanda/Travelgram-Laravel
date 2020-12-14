@@ -97,14 +97,14 @@
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
                             <img src="{{url('frontend/images/testi-1.png')}}" alt="testi-1" class="mb-4 rounded-circle">
-                            <h3 class="mb-4">Riski</h3>
+                            <h3 class="mb-4">Ari</h3>
                             <p class="testimonial">“ It was glorious and I could <br>
                                 not stop to say wohooo for <br>
                                 every single moment <br>
                                 Dankeeeeee “</p>
                         </div>
                         <hr>
-                        <p class="trip-top mt-2">Trip to Ubud</p>
+                        <p class="trip-top mt-2">Trip to Bandung</p>
                     </div>
                 </div>
 
@@ -115,11 +115,11 @@
                             <h3 class="mb-4">Shayna</h3>
                             <p class="testimonial">“ The trip was amazing and <br>
                                 I saw something beautiful in <br>
-                                that Island that makes me <br>
+                                that City that makes me <br>
                                 want to learn more “</p>
                         </div>
                         <hr>
-                        <p class="trip-top mt-2">Trip to Nusa Penida</p>
+                        <p class="trip-top mt-2">Trip to Jakarta</p>
                     </div>
                 </div>
 
@@ -133,7 +133,7 @@
                                 scared too “</p>
                         </div>
                         <hr>
-                        <p class="trip-top mt-2">Trip to Karimun Jawa</p>
+                        <p class="trip-top mt-2">Trip to Bali</p>
                     </div>
                 </div>
             </div>
