@@ -1,8 +1,8 @@
 ## Travelgram
 
-Travelgram is a travel solution that will help customers travel around Indonesia.
+Travelgram is a travel solution that will help customers travel around Indonesia, built using Laravel 7 and Bootstrap 4.
 
-Built using Bootstrap and Laravel.
+For the update of this project please visit https://github.com/donnydevanda/travelgo (Laravel 8).
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
